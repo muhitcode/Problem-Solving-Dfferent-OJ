@@ -18,6 +18,7 @@ for (int i = 0; i < t; i++)
     ar[i] = 2;
   }
 }
+
 for (int i = 0; i < t; i++)
 {
   cout<<ar[i]<<" ";

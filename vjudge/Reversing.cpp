@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int reverseArray(int arr[],long n){
+int reverseArray(int arr[],int n){
   int s = 0;
   int e = n-1;
   while(s<e){
@@ -13,7 +13,7 @@ int reverseArray(int arr[],long n){
 
 }
 int main(){
-  long n;
+  int n;
   cin>>n;
   int arr[n];
   for (int i = 0; i < n; i++)
@@ -25,7 +25,7 @@ int main(){
   {
     cout<<arr[i]<<" ";
   }
-  cout<<endl;
+  
   
   
   return 0;

@@ -1,19 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int palindromeArray(int arr[], int n){
-  int s = 0;
-  int e = n-1;
-  
-  while(s<e){
-    if(arr[s] != arr[e]){
-      int ans = -1;
-      break;
-    }
-    s++;
-    e--;
-  }
-}
+
+
+
 int main(){
   int n;
   cin>>n;
@@ -22,8 +12,20 @@ int main(){
   {
     cin>>arr[i];
   }
-  palindromeArray(arr, n);
+  int s = 0;
+  int e = n - 1;
   int ans;
+  while (s < e)
+  {
+    if (arr[s] != arr[e])
+    {
+      ans = -1;
+      break;
+    }
+    s++;
+    e--;
+  }
+ 
   if(ans == -1)
     cout<<"NO";
   else
