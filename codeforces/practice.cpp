@@ -1,34 +1,24 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-  string s;
-  cin >> s;
-  int up, lw;
-  for (int i = 0; i < s.size(); i++)
-  {
-    if (isupper(s[i]))
-    {
-      up++;
-    }
-    else if(islower(s[i]))
+int main(){
+   int t;
+   cin>>t;
+   while(t--){
+   int n;
+   cin>>n;
+   for (int i = 0; i < n; i++)
+   {
+      for (int j = 0; j < n; j++)
       {
-        lw++;
+         
+      cout<<"*";
       }
-  }
-  string s1;
-
-  for (int i = 0; i < s.size(); i++)
-  {
-    if(up<lw || up == lw){
-      putchar(tolower(s[i]));
-    }
-    else if(up>lw){
-      putchar(toupper(s[i]));
-    }
-  }
-  
-
-  
+      cout<<endl;
+      
+   }
+   cout<<endl;
+   }
+   
+   return 0;
 }
