@@ -1,25 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+
+
+
+
 int main(){
-  int t;
-  cin>>t;
-  while(t--){
-    int n;
-    cin>>n;
-    char arr[n][4];
-    for(int i=0;i<n;i++){
-      for(int j=0;j<4;j++){
-        cin>>arr[i][j];
-      }
-    }
-    for(int i=n-1;i>=0;i--){
-      for(int j=4-1;j>=0;j--){
-        if(arr[i][j] == '#'){
-          cout<<j+1<<" ";
-        }
-      }
-    }cout<<endl;
+  vector<int> myvector;
+  myvector.push_back(10);
+
+  while(myvector.back()!=0){
+    myvector.push_back(myvector.back()-1);//.back() point at the back of the vector...
   }
+  cout<<"myvector contains: ";
+  for(unsigned i=0;i<myvector.size();i++)
+    cout<<" "<<myvector[i];
+  cout<<"\n";
+
+
+
   return 0;
 }
