@@ -1,1 +1,3 @@
-for(int i=1;i<=t;i++){
+ FOR(i,N){
+      min = min(min,(a[i]- a[i-1]));
+    }
