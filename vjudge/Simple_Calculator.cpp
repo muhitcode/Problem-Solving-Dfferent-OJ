@@ -22,29 +22,14 @@ typedef pair<int, int> pi;
 
 
 int main(){
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  int t;
-  cin>>t;
-  while(t--) {
-    int n;
-    cin>>n;
-    vi a(n);
-    int diff = mod;
-    bool sorted = true;
-    FOR(i,n){
-      cin>>a[i];
-      if(i>0){
-        diff = min(a[i] - a[i-1],diff);
-        sorted &= a[i]>=a[i-1];
-      }
-    }
-    if(!sorted){
-      cout<<0<<endl;
-      continue;
-    }
-    cout<<diff/2 +1<<endl;
-    
-  }
+ int a,b;
+ cin>>a>>b;
+ int add = a+b;
+ int mul = a*b;
+ int sub = a-b;
+ cout<<a<<" + "<<b<<" = "<<add<<endl;
+ cout<<a<<" * "<<b<<" = "<<mul<<endl;
+ cout<<a<<" - "<<b<<" = "<<sub<<endl;
+
   return 0;
 }

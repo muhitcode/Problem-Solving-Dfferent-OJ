@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 #define max(a, b) (a<b?b:a)
 #define min(a, b) ((a>b)?b:a)
 #define mod 1e9+7
@@ -30,20 +29,8 @@ int main(){
     int n;
     cin>>n;
     vi a(n);
-    int diff = mod;
-    bool sorted = true;
-    FOR(i,n){
-      cin>>a[i];
-      if(i>0){
-        diff = min(a[i] - a[i-1],diff);
-        sorted &= a[i]>=a[i-1];
-      }
-    }
-    if(!sorted){
-      cout<<0<<endl;
-      continue;
-    }
-    cout<<diff/2 +1<<endl;
+    FOR(i,n)
+    cin >> a[i];
     
   }
   return 0;

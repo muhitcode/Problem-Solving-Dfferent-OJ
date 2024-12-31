@@ -22,29 +22,14 @@ typedef pair<int, int> pi;
 
 
 int main(){
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  int t;
-  cin>>t;
-  while(t--) {
-    int n;
-    cin>>n;
-    vi a(n);
-    int diff = mod;
-    bool sorted = true;
-    FOR(i,n){
-      cin>>a[i];
-      if(i>0){
-        diff = min(a[i] - a[i-1],diff);
-        sorted &= a[i]>=a[i-1];
-      }
-    }
-    if(!sorted){
-      cout<<0<<endl;
-      continue;
-    }
-    cout<<diff/2 +1<<endl;
-    
-  }
+
+  int y;
+  cin>>y;
+  int year = y/365;
+  int month = (y - year*365)/30;
+  int days = y - year*365 - month * 30; 
+
+  cout<<year<<" years\n"<<month<<" months\n"<<days<<" days\n"<<endl;
+
   return 0;
 }
