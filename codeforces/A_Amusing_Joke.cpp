@@ -26,25 +26,19 @@ typedef pair<int, int> pi;
 int main(){
   ios::sync_with_stdio(0);
   cin.tie(0);
-  int t;
-  cin>>t;
-  while(t--) {
-    int n,k;
-    cin>>n>>k;
-    vector<vector<int>> a(n);
-    for(int i=1;i<=n;i++){
-      int x;
-      cin>>x;
-      b[x%k].push_back();
-    }
-    int res = -1;
-    for(int i=0;i<k;i++){
-      if((int)b[i].size() == 1){
-        res = b[i][0];
-        break;
-      }
-    }
-    
+  
+  string a,b,c,d;
+  cin>>a>>b>>c;
+  d = a+b;
+  sort(c.begin(),c.end());
+  sort(d.begin(),d.end());
+
+  if(c==d){
+    cout<<"YES";
   }
+  else{
+    cout<<"NO";
+  }
+  
   return 0;
 }

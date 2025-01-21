@@ -9,6 +9,7 @@ using namespace std;
 #define INF 1000000000000000003
 typedef long long ll;
 typedef vector<int> vi;
+typedef vector<pair<int,int>> vii;
 typedef pair<int, int> pi;
 #define F first
 #define S second
@@ -16,6 +17,8 @@ typedef pair<int, int> pi;
 #define POP pop_back
 #define POP pop_back
 #define MP make_pair
+#define nl endl
+#define sp " " 
 
 
 
@@ -28,10 +31,16 @@ int main(){
   while(t--) {
     int n;
     cin>>n;
-    vi a(n);
-    FOR(i,n)
-    cin >> a[i];
+    vi a(n),b(n);
+    for(auto &x:a)
+      cin>>x;
+    for(auto &x:b)
+      cin>>x;
+    int answer = a[n-1];
+    for(int i = 0;i<n-1;i++)
+      answer += max(0, a[i]-b[i+1]);
+    cout<<answer<<nl;
     
   }
-  return 0;
+  
 }

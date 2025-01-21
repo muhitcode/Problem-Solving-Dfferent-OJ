@@ -2,9 +2,11 @@
 using namespace std;
 
 int main(){
-  int n;
-  cin>>n;
-  if(n%2 == 0 && n > 2){
+  int t;
+  cin>>t;
+  bool x = t % 2 == 0 && t > 2;
+   if (x)
+  {
     cout<<"YES"<<endl;
   }
   else{

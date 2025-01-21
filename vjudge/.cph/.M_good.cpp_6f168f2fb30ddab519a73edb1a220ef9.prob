@@ -1,0 +1,1 @@
+{"name":"Local: M_good","url":"f:\\CP solve\\Problem Solving Dfferent OJ\\vjudge\\M_good.cpp","tests":[{"id":1737069938005,"input":"1\n3\n4\n60\n70\n50\n2","output":"1\n2\n3\n3\n4\n27\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\CP solve\\Problem Solving Dfferent OJ\\vjudge\\M_good.cpp","group":"local","local":true}

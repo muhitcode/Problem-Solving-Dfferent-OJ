@@ -17,33 +17,43 @@ typedef pair<int, int> pi;
 #define POP pop_back
 #define POP pop_back
 #define MP make_pair
-#define nl endl
-#define sp " " 
 
 
 
 
 int main(){
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+  
   int t;
   cin>>t;
   while(t--) {
-    int n,k;
-    cin>>n>>k;
-    vector<vector<int>> a(n);
-    for(int i=1;i<=n;i++){
-      int x;
-      cin>>x;
-      b[x%k].push_back();
+    int a,b;
+    cin>>a>>b;
+    int xk,yk;
+    cin>>xk>>yk;
+    int xq,yq;
+    cin>>xq>>yq;
+    vector<pair<int,int>> dirs = {{a,b}, {a,-b}, {-a,b}, {-a,-b},{b,a}, {b,-a}, {-b,a},{-b,-a}};
+    
+    set<pi> st1,st2;
+    for(auto d: dirs){
+      int x = xk + d.first;
+      int y = yk + d.second;
+
+      st1.insert(make_pair(x,y));
+      
+      x = xq + d.first;
+      y = yq + d.second;
+      st2.insert(make_pair(x,y));
+
     }
-    int res = -1;
-    for(int i=0;i<k;i++){
-      if((int)b[i].size() == 1){
-        res = b[i][0];
-        break;
+
+    int ans = 0;
+    for(auto pos:st1){
+      if(st2.find(pos)!=st2.end()){
+        ans++;
       }
     }
+    cout<<ans<<endl;
     
   }
   return 0;
