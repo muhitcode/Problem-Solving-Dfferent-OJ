@@ -17,27 +17,22 @@ typedef pair<int, int> pi;
 #define MP make_pair 
 #define nl endl
 #define sp " "
-
-int maxSum(int arr[],int n,int k){
-    if(n<=k){
-        cout<<"invalid";
-        return -1;
-    }
-    int max_sum = 0;
-    for(int i=0;i<k;i++)
-        max_sum +=arr[i];
-    int window_sum = max_sum;
-    for(int i=k;i<n;i++){
-        window_sum+=arr[i]-arr[i-k];
-        max_sum = max(max_sum,window_sum);
-    }
-    return max_sum;
-}
 int main() 
 { 
-     int arr[] = { 1, 4, 2, 10, 2, 3, 1, 0, 20 };
-    int k = 4;
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout << maxSum(arr, n, k);
-    return 0;
-} 
+    ios::sync_with_stdio(0); 
+    cin.tie(0); 
+    int T; 
+    cin >> T;
+    int x=0,y=0,z=0,X=0,Y=0,Z=0;
+    while (T--) { 
+        cin>>x>>y>>z;
+        X+=x;Y+=y;Z+=z;
+    } 
+    if(X==0 && Y==0&&Z==0){
+    	cout<<"YES"<<endl;
+    }else{
+    	cout<<"NO"<<endl;
+    }
+    return 0; 
+}
+
