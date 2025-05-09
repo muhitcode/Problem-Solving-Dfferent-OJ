@@ -2,24 +2,35 @@
 using namespace std;
 #define ll long long
 #define vi vector<int>
+class Solution{
+public:
+  pair<int, int> getMinMax(vector<int> arr){
+    long long max = INT_MIN,min=INT_MAX;
+    for(int i=0;i<arr.size();i++){
+      if(arr[i]>max) max = arr[i];
+      if(arr[i]<min) min = arr[i];
+    }
+    return {min, max};
+  }
+};
+
 int main()
 {
-  int n;
-  cin >> n;
-  string s;
-  cin >> s;
-  int x = 0, m = 0;
-  for (int i = 0; i < n; i++)
-  {
-    if (s[i] == 'A')
-      x++;
-    if (s[i] == 'D')
-      m++;
+  int t;cin>>t;
+  cin.ignore();
+  while(t--){
+    vector<int> arr;
+    string input;
+    getline(cin, input);
+    stringstream ss(input);
+    int number;
+    while(ss>>number){
+      arr.push_back(number);
+    }
+    Solution ob;
+    pair<int, int> pp = ob.getMinMax(arr);
+    cout<<pp.first<<" "<<pp.second<<endl;
+    cout<<"~"<<endl;
   }
-  if (x > m)
-    cout << "Anton" << endl;
-  else if (x < m)
-    cout << "Danik" << endl;
-  else
-    cout << "Friendship" << endl;
+  return 0;
 }
