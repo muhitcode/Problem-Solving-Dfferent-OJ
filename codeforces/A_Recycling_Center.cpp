@@ -6,37 +6,25 @@ using namespace std;
 #define pi pair<int,int>
 #define vpi vector<pair<int,int>>
 #define sp char(1<<5)
+void solve(){
+    ll n,c;
+    cin>>n>>c;
+    vector<ll> v(n);
+    for(ll &x: v) cin>>x;
+    sort(v.begin(),v.end(),greater<int>());
+    ll free = 0;
+    for(ll x:v){
+        if(x*(1<<free)<=c){`
+            free++;
+        }
+    }
+    cout<<n-free<<nl;
+}
 int main(){
+    ios::sync_with_stdio(false), cin.tie(0);
     int t;cin>>t;
     while(t--){
-        ll n,c;
-        cin>>n>>c;
-        list<int> a;
-        for(int i=0;i<n;i++)
-            {
-                int x;cin>>x;
-                a.push_back(x);
-            }
-        ll ans = 0;
-        ll m = a.front();
-        for(int i=0;i<n;i++)
-        {
-            if ((a.front() * (pow(2, i))) > (a.back() * (pow(2, i))) && ((a.front() * (pow(2, i))) != c)&& ((a.front()*pow(2,i)>c)))
-            {
-                m = pow(2,i)*a.back();
-                a.pop_back();
-            }
-                else
-                {
-                    m = pow(2, i) * a.front();
-                    a.pop_front();
-                }
-        //    cout<<m<<sp;
-           if(m>c){
-            ans++;
-           }
-        }
-        cout<<ans<<nl;
+        solve();
     }
     return 0;
 }
